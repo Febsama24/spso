@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPSO</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <nav class="nav">
+    <a class="nav-link" href="/beranda" role="button"><i class="fas fa-arrow-left"></i></a>
+    <a class="logo" href="/ecommerce">Ecommerce</a>
+    <ul class="navlist">
+      <li class="navitems">
+        <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+        <span class="koin-value">Rp.{{ jumlahKoin }},00</span>
+      </li>
+      <li class="navitems"><a href="/login" class="btn btn-danger" role="button">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10">
+            <div class="card card-success">
+              <div class="card-header">
+                <h4 class="card-title">Kompos</h4>
+              </div>
+
+              <!--<div class="form-inline btn btn-rounded">
+                <div class="input-group" data-widget="sidebar-search">
+                  <input class="form-control form-control-sidebar bg-light" type="search" placeholder="Ketik disini"
+                    aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-rounded btn-control-sidebar bg-light">
+                      <i class="fas fa-search fa-fw"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>-->
+
+              <div class="card-body">
+                <div>
+                  <div class="mb-2">
+                    <div class="float-right">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="filter-container p-0 row">
+                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                      <img src="/dist/img/kms/1.jpg" width="100">
+                      <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+                        RP.5000,00
+                      </p>
+                      <p>
+                        Kompos 250 gr
+                      </p>
+                      <a href="/pesan" class="btn btn-warning">Tukar</a>
+                    </div>
+                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                      <img src="/dist/img/kms/2.jpeg" width="100">
+                      <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+                        RP.10000,00
+                      </p>
+                      <p>
+                        Kompos 500 gr
+                      </p>
+                      <a href="/pesan" class="btn btn-warning">Tukar</a>
+                    </div>
+                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                      <img src="/dist/img/kms/3.jpg" width="100">
+                      <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+                        RP.10000,00
+                      </p>
+                      <p>
+                        Kompos cair 450 l
+                      </p>
+                      <a href="/pesan" class="btn btn-warning">Tukar</a>
+                    </div>
+                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                      <img src="/dist/img/kms/4.jpg" width="100">
+                      <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+                        RP.15000,00
+                      </p>
+                      <p>
+                        Kompos cair 1 L
+                      </p>
+                      <a href="/pesan" class="btn btn-warning">Tukar</a>
+                    </div>
+                    <div class="filtr-item col-sm-2" data-category="1" data-sort="white sample">
+                      <img src="/dist/img/kms/5.jpg" width="100">
+                      <p class="text-warning"><i class="nav-icon fas fa-coins fa-fw"></i>
+                        RP.25000,00
+                      </p>
+                      <p>
+                        Kompos 1 Karung
+                      </p>
+                      <a href="/pesan" class="btn btn-warning">Tukar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <strong>Copyright &copy; 2023 SPSO</a>.</strong>
+    <b>Version</b> 1.1
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+  </div>
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+</body>
+
+</html>

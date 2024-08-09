@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPSO</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <nav class="nav">
+    <a class="nav-link" href="/beranda" role="button"><i class="fas fa-arrow-left"></i></a>
+    <a class="logo" href="/antarjemput">Antarjemput</a>
+    <ul class="navlist">
+      <li class="navitems"><a href="/login" class="btn btn-danger" role="button">Logout</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-warning">
+            <div class="card-header">
+              <h3 class="card-title">Antar - Jemput</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <div class='form'>
+              <form name="cal" method='post' action='/simpan' class='cmxform form-horizontal tasi-form'
+                id='commentForm'>
+                <div class="card-body">
+                  <div class='form'>
+                    <div class="form-group">
+                      <div class="col-sm-10">
+                        <input type="text" name="id_antar" class="form-control" readonly="readonly" hidden>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-10">
+                        <input type="text" name="id_user" class="form-control" readonly="readonly" hidden>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputName1">Nama Pengirim</label>
+                      <div class="col-lg-10">
+                        <input type="text" name="nama" class="form-control" id="exampleInputName1"
+                          placeholder="Masukkan Nama">
+                      </div>
+                    </div>
+                    <div class='form-group'>
+                      <label for='cname'>Berat Sampah (Maks. 3 Karung)</label>
+                      <div class="col-lg-10">
+                        <select name="berat" id="berat" onchange="myFunction(event)" class='form-control'>
+                          <option selected disabled>...</option>
+                          <option value="kresek">1 Kresek Besar</option>
+                          <option value="karung">1 karung</option>
+                          <option value="lbh"> > 1 karung</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputNumber1">Alamat Lengkap</label>
+                      <div class="col-lg-10">
+                        <input type="text" name="alamat" class="form-control" id="exampleInputNumber1"
+                          placeholder="Masukkan alamat">
+                      </div>
+                    </div>
+
+
+                    <div class='form-group'>
+                      <label for='cname'>Tanggal</label>
+                      <div class='control-label col-lg-10'>
+                        <input type='date' value="<?php echo $tgl ?>" class='form-control' name='tgl_transaksi'
+                          required>
+                      </div>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class='form-group'>
+                        <label for='cname'>Jenis Sampah</label>
+                        <div>
+                          <input type="checkbox" name="jenis_sampah[]" value="buah-buahan"> <label>Buah-Buahan</label>
+                          <br>
+                          <input type="checkbox" name="jenis_sampah[]" value="sayuran"> <label>Sayuran</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='form-group'>
+                      <label for='cname' class='control-label col-lg-10'>Total Bayar</label>
+                      <div class='col-lg-12'>
+                        <input id="total_bayar" name="total_bayar" type="number" value="0" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class='form-group'>
+                      <div class="col-sm-10">
+                        <select name="pesanan" hidden>
+                          <option value="delay" selected></option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='form-group'>
+                    <div class='col-lg-offset-2 col-lg-10'>
+                      <button class='btn btn-success waves-effect waves-light' type='submit'>Selesai</button>
+                      <a class='btn btn-danger' href='/beranda'>Batal</a>
+                    </div>
+              </form>
+            </div>
+  </section>
+  <!-- /.content -->
+  </div>
+
+
+  <footer class="footer">
+    <strong>Copyright &copy; 2023 SPSO</a>.</strong>
+    <b>Version</b> 1.1
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <script>
+    function myFunction(event) {
+      console.log(event.target.value)
+
+      if (event.target.value === "kresek") {
+        document.getElementById("total_bayar").value = 15000;
+      } else if (event.target.value === "karung") {
+        document.getElementById("total_bayar").value = 25000;
+      } else if (event.target.value === "lbh") {
+        document.getElementById("total_bayar").value = 50000;
+      }
+
+
+    };
+  </script>
+</body>
+
+</html>

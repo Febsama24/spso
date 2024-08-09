@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPSO</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <nav class="nav">
+      <a class="nav-link" href="/beranda" role="button"><i class="fas fa-arrow-left"></i></a>
+      <a class="logo" href="/ecommerce">Ecommerce</a>
+      <ul class="navlist">
+        <li class="navitems"><a href="/login" class="btn btn-danger" role="button">Logout</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="content-wrapper">
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="card card-success">
+                <div class="card-header">
+                  <h3 class="card-title">Checkout</h3>
+                </div>
+                <div class="card-body">
+                  <div class='form'>
+
+                    <form method='post' action="/pesan" class='cmxform form-horizontal tasi-form'
+                      id='commentForm'>
+                      <div class="form-group">
+                        <div class="col-sm-10">
+                          <input type="number" name="id_faktur" hidden>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputName1">Nama Penerima :</label>
+                        <div class="col-sm-10">
+                          <input type="name" name="nama" class="form-control" id="exampleInputName1"
+                            placeholder="Masukkan Nama">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputAddress1">Alamat Penerima :</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="alamat" class="form-control" id="exampleInputAddress1"
+                            placeholder="Masukkan Alamat">
+                        </div>
+                      </div>
+
+                      <div class='form-group'>
+                        <label for='cname' class='control-label col-lg-2'>Tanggal</label>
+                        <div class='col-lg-10'>
+                          <input type='date' name='tgl_transaksi' class='form-control' required>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="col-sm-10">
+                          <div class="alert alert-dismissible" style="background-color:#C6CBC3" padding="10px">
+                            <div class="filtr-item float-sm-right" data-category="2, 4" data-sort="black sample">
+                              <p>
+                                Kompos 250 gr
+                              </p>
+                              <p>
+                                Rp 5000
+                              </p>
+                            </div>
+                            <div class="filtr-item col-sm-2" data-category="2, 4" data-sort="black sample">
+                              <img src="/dist/img/kms/1.jpg" width="400" class="product-image" alt="Product Image">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" name="nama_kompos" class="form-control" id="exampleInputAddress1"
+                            placeholder="Masukkan Alamat " hidden>
+                        </div>
+                        <div class='form-group'>
+                          <label for="exampleInputAddress1">Jumlah kompos</label>
+                          <div class="col-sm-10">
+                            <select name="qty" id="qty">
+                              <option value="">- QTY -</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <label for='cname' class='control-label col-lg-2'>Harga Kompos</label>
+                          <div class="col-sm-10">
+                            <input type="number" name="harga" id="harga" class="form-control">
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <label for='cname' class='control-label col-lg-2'>Total Bayar</label>
+                          <div class="col-sm-10">
+                            <input type="number" name="total_bayar" id="total_bayar" class="form-control" Readonly
+                              value="0">
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <div class='col-lg-offset-2 col-lg-10'>
+                            <button class='btn btn-warning waves-effect waves-light' type='submit'>Pesan</button>
+                            <a class='btn btn-danger' href='/ecommerce'>Batal</a>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <footer class="footer">
+            <strong>&copy; 2023 SPSO.</strong>
+            <b>Version</b> 1.1
+          </footer>
+
+            <aside class="control-sidebar control-sidebar-dark">
+            </aside>
+          </div>
+
+
+          <!-- jQuery -->
+          <script src="plugins/jquery/jquery.min.js"></script>
+          <!-- jQuery UI 1.11.4 -->
+          <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+          <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+          <script>
+            $.widget.bridge('uibutton', $.ui.button)
+          </script>
+          <!-- Bootstrap 4 -->
+          <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- ChartJS -->
+          <script src="plugins/chart.js/Chart.min.js"></script>
+          <!-- Sparkline -->
+          <script src="plugins/sparklines/sparkline.js"></script>
+          <!-- JQVMap -->
+          <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+          <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+          <!-- jQuery Knob Chart -->
+          <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+          <!-- daterangepicker -->
+          <script src="plugins/moment/moment.min.js"></script>
+          <script src="plugins/daterangepicker/daterangepicker.js"></script>
+          <!-- Tempusdominus Bootstrap 4 -->
+          <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+          <!-- Summernote -->
+          <script src="plugins/summernote/summernote-bs4.min.js"></script>
+          <!-- overlayScrollbars -->
+          <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+          <!-- AdminLTE App -->
+          <script src="dist/js/adminlte.js"></script>
+          <!-- AdminLTE for demo purposes -->
+          <script src="dist/js/demo.js"></script>
+          <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+          <script src="dist/js/pages/dashboard.js"></script>
+
+          <script>
+            // Mendapatkan referensi elemen-elemen yang diperlukan
+            const qtyInput = document.getElementById('qty');
+            const hargaInput = document.getElementById('harga');
+            const totalBayarInput = document.getElementById('total_bayar');
+
+            // Menambahkan event listener untuk mengupdate total_bayar saat qty atau harga berubah
+            qtyInput.addEventListener('change', updateTotalBayar);
+            hargaInput.addEventListener('change', updateTotalBayar);
+
+            function updateTotalBayar() {
+              // Mendapatkan nilai qty dan harga
+              const qty = parseInt(qtyInput.value);
+              const harga = parseInt(hargaInput.value);
+
+              // Menghitung total_bayar
+              const totalBayar = qty * harga;
+
+              // Memperbarui nilai pada input total_bayar
+              totalBayarInput.value = totalBayar;
+            }
+          </script>
+  </body>
+
+</html>
+
+<!--jika sudah konek ke dtabase
+<script type="text/javascript">
+  $("#harga").keyup(function () {
+    var a = parseFloat($("#harga").val());
+    var b = parseFloat($("#qty").val());
+    var c = a * b;
+    $("#total_bayar").val(c);
+  });
+
+  $("#qty").keyup(function () {
+    var a = parseFloat($("#harga").val());
+    var b = parseFloat($("#qty").val());
+    var c = a * b;
+    $("#total_bayar").val(c);
+  });
+</script>
+<script>
+  $('#koin').change(function () {
+    if ($(this).prop('checked')) {
+      $('#hidden_status').val('Active');
+    }
+    else {
+      $('#hidden_status').val('Deactive');
+    }
+  });
+</script>-->
